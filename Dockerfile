@@ -5,7 +5,7 @@ USER root
 RUN apt-get --assume-yes install rubygems ruby-dev
 RUN gem install dalli redis
 
-RUN logstash-plugin install logstash-output-opensearch
+RUN logstash-plugin install logstash-output-opensearch logstash-input-google_pubsub
 
 USER logstash
 
